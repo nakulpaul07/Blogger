@@ -1,0 +1,91 @@
+<%- include('../header.ejs')   %>
+
+
+    <section class="dashboard-wrap mtb-40">
+    	<div class="container">
+            <div class="body-content">
+        		<div class="row">
+        			<div class="col-md-3">
+                        <div class="dash-left">
+                            <ul>
+                                <li class="active"><a href="/dashboard">Dashboard</a></li>
+                                <li><a href="/admin_blog_list">Blogs</a></li>
+                                <li><a href="#">Categories</a></li>
+                                <li><a href="#">Pages</a></li>
+                                <li><a href="#">Logout</a></li>
+                            </ul>
+                        </div>   
+                    </div>
+                    <div class="col-md-9">
+                        <div class="dash-right">
+                            <center><div class="dash-header">
+                              <div class="dash-title text-center">
+                                  <h1>Edit Blog</h1>
+                              </div>
+                            </div></center>
+                            <div class="blog-form">
+                              <form action="/blogUpdate/<%= d._id %>" method="post">
+                                <div class="form-group form-row">
+                                    <label class="col-md-3" >Title <span class="required">*</span></label>
+                                    <div class="col-md-9">
+                                      <input type="text" value="<%= d.title %>" name="title" class="form-control" placeholder="Title" required>
+                                    </div>
+                                </div>
+                                <div class="form-group form-row">
+                                  <label class="col-md-3">Is Featured</label>
+                                  <div class="col-md-9">
+                                    <input type="radio" name="feature" value="Yes" /> Yes
+                                    <input type="radio" name="feature" value="No" /> No
+                                  </div>
+                                </div>
+                                <div class="form-group form-row">
+                                  <label class="col-md-3">Is Active</label>
+                                  <div class="col-md-9">
+                                    <input type="radio" name="active" value="Yes" /> Yes
+                                    <input type="radio" name="active" value="No" /> No
+                                  </div>
+                                </div>
+                                <div class="form-group form-row">
+                                  <label class="col-md-3">Upload Image</label>
+                                  <div class="col-md-9">
+                                    <input type="file" id="image" />
+                                  </div>
+                                </div>
+                                <div class="form-group form-row">
+                                    <label class="col-md-3">Description <span class="required">*</span></label>
+                                    <div class="col-md-9">
+                                      <textarea name="description" rows="5" class="form-control" required>
+                                        <%= d.description %>
+                                      </textarea>
+                                    </div>
+                                </div>
+                                <div class="form-group form-row">
+                                    <label class="col-md-3"></label>
+                                    <div class="col-md-9">
+                                      <button type="submit" class="btn btn-primary">Update</button>
+                                    </div>
+                                </div>
+                              </form>
+                            </div>
+                        </div>   
+                    </div>
+        		</div>
+            </div>
+    	</div>
+    </section>
+
+    <footer>
+    	<div class="container">
+    		<div class="copyright">
+    			<div>Designed by RSGiTECH</div>
+    		</div>
+    	</div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+<%- include('./header.ejs') %>
+
+  <section class="cmspage mtb-40">
+
+    <div class="container">
+      <div class="page-desc">
+        <div class="row justify-content-center">
+
+          <div class="col-md-3">
+            <div class="dash-left">
+              <ul>
+                <li class="active"><a href="/dashboard" class="active">Dashboard</a></li>
+                <li><a href="/admin_blog_list">Blogs</a></li>
+                <li><a href="/contact">Contact</a></li>
+                <li><a href="#">Pages</a></li>
+                <li><a href="/logout">Logout</a></li>
+              </ul>
+            </div>
+          </div>
+
+
+          <div class="col-md-9">
+            <h1>Contact</h1>
+            <form action="/contactInsert" method="post">
+              <div class="form-group">
+                <input type="text" name="name" class="form-control" placeholder="Name">
+              </div>
+              <div class="form-group">
+                <input type="text" name="email" class="form-control" placeholder="E-Mail">
+              </div>
+              <div class="form-group">
+                <input type="text" name="phone" class="form-control" placeholder="Phone">
+              </div>
+              <div class="form-group">
+                <textarea name="message" rows="5" class="form-control" placeholder="Message"></textarea>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-success">Send Message</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="copyright">
+        <div>Designed by RSGiTECH</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+
+  </html>

@@ -1,0 +1,79 @@
+<%- include('./header.ejs')   %>
+
+    <section class="blog-detail mtb-40">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-8">
+    				<div class="blog-left">
+                        <h1><%= d.title %></h1>
+                        <div class="posted-on">
+                            <p>by <span>Nakul</span> on <span>October 22, 2018</span></p>
+                        </div>
+                        <div class="detail-img">
+                            <img src="<%= d.image.url %>" class="h-100 w-100"   alt="">
+                        </div>
+                        <div class="blog-desc">
+                            <h5><%= d.description %></h5>
+                        </div>
+    				</div>
+    			</div>
+    			<div class="col-md-4">
+    				<div class="blog-right">
+                        <div class="right-widget recent-post">
+                            <h3>Recent Blogs</h3>
+                                <div class="rb-box">
+
+                                    <div>
+                                    <% r.forEach((recentitem) => { %>
+                                        <img src="<%= recentitem.image.url %> " style="height: 3cm; width: 4cm;" alt="blog1" />
+                                    
+                                  
+                                        <h4><%= recentitem.title %></h4>
+                                      <div>  <p>Posted On: October 22, 2018</p></div>
+                                        <% }) %>
+
+                                    </div>
+                    
+                                    
+
+                                </div>
+                                </div>
+
+                               
+                         <div class="right-widget categories">
+                             <h3>Categories</h3>
+                             <ul>
+                                <li><a href="#">Technology</a></li>
+                                <li><a href="#">Design</a></li>
+                                <li><a href="#">Culture</a></li>
+                                <li><a href="#">Business</a></li>
+                                <li><a href="#">Politics</a></li>
+                                <li><a href="#">Opinion</a></li>
+                                <li><a href="#">Science</a></li>
+                                <li><a href="#">Health</a></li>
+                                <li><a href="#">Style</a></li>
+                                <li><a href="#">Travel</a></li>
+                            </ul>
+                         </div>
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+       
+    </section>
+
+    <footer>
+    	<div class="container">
+    		<div class="copyright">
+    			<div>Designed by RSGiTECH</div>
+    		</div>
+    	</div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+  </body>
+</html>
